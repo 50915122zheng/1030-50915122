@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字轉語音</title>
+    <style>
+        body {
+            padding-top: 56px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JS 套件介紹</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="text-to -speech.html">文字轉語音</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="SweetAlert2.html">SweetAlert2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moment.html">Monment.js</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="anime.html">anime.js</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="d3.html">D3.js </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="toast.html">Toastify.js</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+
+
+    <div id="navbar-placeholder"></div>
+    <script src="navbar.js"></script>
+
+    <div class="container mt-3">
+        <h2>文字轉語音</h2>
+        <p>利用 Web Speech API 進行文字轉語音的示例。</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Web Speech API
+                官網</a></p>
+
+        <h3>範例程式碼</h3>
+        <pre><code>
+// 使用 Web Speech API 將文字轉換為語音
+function speakText(text) {
+    const msg = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(msg);
+}
+
+// 點擊按鈕時執行
+document.getElementById('speakButton').addEventListener('click', () => {
+    const text = document.getElementById('textInput').value;
+    speakText(text);
+});
+        </code></pre>
+
+        <h3>效果展示</h3>
+        <div class="mb-3">
+            <label for="textInput" class="form-label">請輸入文字：</label>
+            <input type="text" id="textInput" class="form-control" placeholder="例如：你好，這是文字轉語音的示例">
+        </div>
+        <button id="speakButton" class="btn btn-primary">播放語音</button>
+    </div>
+
+    <script>
+        // 使用 Web Speech API 將文字轉換為語音
+        function speakText(text) {
+            const msg = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(msg);
+        }
+
+        // 點擊按鈕時執行
+        document.getElementById('speakButton').addEventListener('click', () => {
+            const text = document.getElementById('textInput').value;
+            speakText(text);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

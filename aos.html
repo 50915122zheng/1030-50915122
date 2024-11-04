@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOS 動畫</title>
+    <style>
+        body {
+            padding-top: 56px;
+            /* 根據實際 navbar 高度調整 */
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #e0edf8;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JS 套件介紹</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="text-to -speech.html">文字轉語音</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="SweetAlert2.html">SweetAlert2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="moment.html">Monment.js</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="anime.html">anime.js</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="d3.html">D3.js </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="toast.html">Toastify.js</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar 位置 -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="container mt-3">
+        <h2>AOS 動畫效果</h2>
+        <p><a href="https://michalsnik.github.io/aos/" target="_blank">AOS 官網</a></p>
+
+        <h3>範例程式碼</h3>
+        <pre><code>
+            &lt;!-- AOS CSS 和 JS --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"&gt;&lt;/script&gt;
+
+&lt;!-- 初始化 AOS --&gt;
+&lt;script&gt;
+    AOS.init();
+&lt;/script&gt;
+            &lt;div data-aos="fade-up"&gt;Fade Up 動畫&lt;/div&gt;
+            &lt;div data-aos="fade-down"&gt;Fade Down 動畫&lt;/div&gt;
+            &lt;div data-aos="fade-left"&gt;Fade Left 動畫&lt;/div&gt;
+            &lt;div data-aos="fade-right"&gt;Fade Right 動畫&lt;/div&gt;
+            &lt;div data-aos="zoom-in"&gt;Zoom In 動畫&lt;/div&gt;
+            &lt;div data-aos="zoom-out"&gt;Zoom Out 動畫&lt;/div&gt;
+            &lt;div data-aos="flip-left"&gt;Flip Left 動畫&lt;/div&gt;
+            &lt;div data-aos="flip-right"&gt;Flip Right 動畫&lt;/div&gt;
+            &lt;div data-aos="slide-up"&gt;Slide Up 動畫&lt;/div&gt;
+            &lt;div data-aos="slide-down"&gt;Slide Down 動畫&lt;/div&gt;
+            &lt;div data-aos="slide-left"&gt;Slide Left 動畫&lt;/div&gt;
+            &lt;div data-aos="slide-right"&gt;Slide Right 動畫&lt;/div&gt;
+                    </code></pre>
+
+        <h3>效果展示</h3>
+        <!-- AOS 動畫效果範例 -->
+        <div data-aos="fade-up" class="p-5 mt-3 bg-primary text-white">Fade Up 動畫</div>
+        <div data-aos="fade-down" class="p-5 mt-3 bg-secondary text-white">Fade Down 動畫</div>
+        <div data-aos="fade-left" class="p-5 mt-3 bg-success text-white">Fade Left 動畫</div>
+        <div data-aos="fade-right" class="p-5 mt-3 bg-danger text-white">Fade Right 動畫</div>
+        <div data-aos="zoom-in" class="p-5 mt-3 bg-warning text-dark">Zoom In 動畫</div>
+        <div data-aos="zoom-out" class="p-5 mt-3 bg-info text-white">Zoom Out 動畫</div>
+        <div data-aos="flip-left" class="p-5 mt-3 bg-dark text-white">Flip Left 動畫</div>
+        <div data-aos="flip-right" class="p-5 mt-3 bg-light text-dark">Flip Right 動畫</div>
+        <div data-aos="slide-up" class="p-5 mt-3 bg-primary text-white">Slide Up 動畫</div>
+        <div data-aos="slide-down" class="p-5 mt-3 bg-secondary text-white">Slide Down 動畫</div>
+        <div data-aos="slide-left" class="p-5 mt-3 bg-success text-white">Slide Left 動畫</div>
+        <div data-aos="slide-right" class="p-5 mt-3 bg-danger text-white">Slide Right 動畫</div>
+    </div>
+    <div class="mt-5"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

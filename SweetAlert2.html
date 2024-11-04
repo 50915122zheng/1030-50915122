@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetAlert2 介紹</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">JS 套件介紹</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="aos.html">AOS 動畫</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="text-to -speech.html">文字轉語音</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" aria-current="page" href="lottie.html">Lottie 動畫</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="chart.html">Chart.js 圖表</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="lazy-loading.html">Lazy-loading 懶加載</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="SweetAlert2.html">SweetAlert2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="moment.html">Monment.js</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="anime.html">anime.js</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="d3.html">D3.js </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="toast.html">Toastify.js</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>SweetAlert2 </h1>
+        <p><a href="https://sweetalert2.github.io/" target="_blank">sweetalert2官網</a></p>
+
+        <p>SweetAlert2 是一個美觀的彈出窗口工具，讓您可以輕鬆創建多種互動提示。</p>
+        <h3>範例程式碼</h3>
+        <pre><code>
+            
+            &lt;link rel="stylesheet" href="style.css"&gt;
+            &lt;script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"&gt;&lt;/script&gt;
+
+            // 基本提示
+
+                Swal.fire('這是一個基本提示！');
+
+            // 確認提示
+
+                Swal.fire({
+                    title: '您確定嗎？',
+                    text: "此操作無法回復！",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: '是的，確定！'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire('已確認！', '您的操作已成功完成。', 'success');
+                    }
+                });
+
+            // 輸入提示
+
+                Swal.fire({
+                    title: '請輸入您的名字',
+                    input: 'text',
+                    inputPlaceholder: '輸入名字',
+                    showCancelButton: true
+                }).then((result) => {
+                    if (result.value) {
+                        Swal.fire(`你好, ${result.value}!`);
+                    }
+                });
+            //錯誤提示
+                
+                    Swal.fire({
+                        icon: "error",
+                        title: "錯誤",
+                        text: "大錯特錯",
+                        footer: '<a href="https://youtu.be/dQw4w9WgXcQ">Why do I have this issue?</a>'
+                    });
+                
+            //帶有自訂圖像的訊息
+                
+                    Swal.fire({
+                        title: "香蕉!",
+                        text: "猴子愛吃香蕉.",
+                        imageUrl: "https://i.pinimg.com/736x/e2/4a/8c/e24a8c1d1613eeb8d9371ad84faf3cec.jpg",
+                        imageWidth: 400,
+                        imageHeight: 200,
+                        imageAlt: "Custom image"
+                    });
+    
+
+                    </code></pre>
+        <h3>效果展示</h3>
+        <button onclick="showBasicAlert()">基本提示</button>
+        <button onclick="showConfirmAlert()">確認提示</button>
+        <button onclick="showerror()">錯誤提示</button>
+        <button onclick="showInputAlert()">輸入提示</button>
+        <button onclick="imagemessage()">圖片提示</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

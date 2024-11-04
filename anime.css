@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 將所有內容置中 */
+    justify-content: flex-start;
+    
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    /* 已經是置中對齊，無需再添加 text-align */
+}
+
+
+button {
+    padding: 20px 40px;
+    font-size: 48px;
+    margin-bottom: 50px;
+    /* 增加按鈕下方的間距 */
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.box {
+
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 8px;
+    margin-top: 30px;
+    /* 增加方塊上方的間距 */
+    color: white;
+    /* 文字顏色 */
+    font-size: 18px;
+    /* 文字大小 */
+    text-align: center;
+    /* 文字對齊 */
+    display: flex;
+    /* 使用 Flexbox */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+}
+
+
